@@ -4,11 +4,17 @@
 
 :root {
   --male-red-color: #e62626;
+  --male-black-color: #000000;
 }
 
 .male-red-color {
   color: var(--male-red-color);
 }
+
+.male-black-color {
+  color: var(--male-black-color);
+}
+
 html {
   font-size: 10px;
 }
@@ -41,11 +47,12 @@ html {
 }
 
 .frame {
-  border: 1px solid #09ec15;
+  border: 1px solid var(--male-black-color);
   height: 100%;
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .header {
@@ -57,6 +64,7 @@ html {
   flex: 1;
   text-align: center;
 
+  color: var(--male-black-color);
   font-size: 3, 6rem;
   font-family: "Homemade Apple", sans-serif;
   text-transform: lowercase;
@@ -72,6 +80,13 @@ html {
   background: unset;
   border: unset;
   outline: unset;
+}
+
+.header-btn.male-red-color:active {
+  text-shadow: 1px 1px 2px var(--male-red-color);
+}
+.header-btn.male-black-color:active {
+  text-shadow: 1px 1px 2px var(--male-black-color);
 }
 
 .add {
@@ -91,7 +106,6 @@ html {
   flex: 1;
 
   border-bottom: 1px solid var(--male-red-color);
-
   outline: unset;
 
   font-family: "Homemade Apple", sans-serif;
@@ -110,4 +124,33 @@ html {
   background: unset;
   border: unset;
   outline: unset;
+}
+
+.add-btn.male-black-color:active {
+  text-shadow: 1px 1px 2px var(--male-black-color);
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo {
+  position: relative;
+
+  flex: 1 0 auto;
+  text-align: center;
+
+  min-height: 34px;
+  margin: 16px 0 0;
+  font-family: "Homemade Apple", sans-serif;
+  font-size: 24px;
+
+  border-bottom: 1px solid var(--male-red-color);
+}
+
+.todo-text {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
